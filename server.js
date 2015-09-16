@@ -20,7 +20,7 @@ router.use(function(request, response, next) {
 });
 
 router.get('/', function(request, response) {
-  response.json({ message: 'You are running dangerously low on cerveja' });
+  response.json({ message: 'Está rodando em /' });
 });
 
 var cervejasRoute = router.route('/cervejas');
