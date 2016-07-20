@@ -7,9 +7,13 @@
     "body-parser": "^1.13.3",
     "express": "^4.13.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "frisby": "latest",
+    "jasmine-node": "latest"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretest": "node server.js > /dev/null 2>&1 &",
+    "test": "node_modules/jasmine-node/bin/jasmine-node spec/server_spec.js",
     "start": "node server.js"
   },
   "author": "",
